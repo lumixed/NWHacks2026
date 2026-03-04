@@ -1,121 +1,93 @@
-# ✈️ Travelio
+# Travelio
 
-Discover your next spontaneous adventure with the best flight deals from your city.
+A flight deal discovery app that shows the cheapest flights departing from your city, with AI-generated travel itineraries.
 
-## 🌟 Inspiration
+## What it does
 
-Ever wanted to travel somewhere new but didn't know where to go? Travelio was born from the desire to help spontaneous travelers find unusually cheap flight tickets and embark on unexpected adventures. Instead of searching for flights to a specific destination, Travelio finds the best deals departing from your city and surprises you with exciting possibilities.
+- **Flight Discovery**: Finds the cheapest available flights relative to average monthly prices from your origin city
+- **Deal Comparison**: Shows how much cheaper each fare is versus typical pricing
+- **AI Itineraries**: Generates personalized travel itineraries via the Gemini API for any destination you pick
 
-## 🚀 What it does
+## Tech Stack
 
-- **Smart Flight Discovery**: Displays the best flight deals relative to average monthly prices from your origin city
-- **AI-Powered Itineraries**: Generates personalized travel itineraries using Gemini AI
-- **Deal Comparison**: Shows you unusually cheap tickets compared to typical pricing
+- **Frontend**: React + Vite, CSS (Albert Sans + Bricolage Grotesque via Google Fonts)
+- **Backend**: Node.js (Express), Python
+- **Data**: Amadeus Travel API (flight pricing), Gemini API (itinerary generation)
 
-## 🛠️ Built With
+## Prerequisites
 
-- **Frontend**: React, HTML, CSS, JavaScript
-- **Backend**: Python
-- **APIs**: 
-  - Amadeus Travel API (flight data)
-  - Gemini API (itinerary generation)
-
-## 📋 Prerequisites
-
-Before running Travelio, make sure you have:
-
-- Git
 - Node.js
 - Python 3.x
-- Amadeus API credentials ([Get them here](https://developers.amadeus.com/))
-- Gemini API key ([Get it here](https://ai.google.dev/))
+- Amadeus API credentials — [developers.amadeus.com](https://developers.amadeus.com/)
+- Gemini API key — [ai.google.dev](https://ai.google.dev/)
 
-## ⚙️ Setup
+## Setup
 
-1. **Clone the repository**
+1. Clone the repository
+
    ```bash
-   git clone https://github.com/yourusername/travelio.git
-   cd travelio
+   git clone https://github.com/lumixed/Travelio.git
+   cd Travelio
    ```
 
-2. **Install Python dependencies**
+2. Install frontend dependencies
+
+   ```bash
+   npm install
+   ```
+
+3. Install Python dependencies
+
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Create environment file in main directory**
-   
-   Create a `.env` file in the root directory:
+4. Create a `.env` file in the root directory
+
    ```env
    AMADEUS_API_KEY=your_amadeus_key
    AMADEUS_API_SECRET=your_amadeus_secret
    ```
 
-4. **Create environment file in travel-itinerary directory**
-   
-   Create a `.env` file in the `travel-itinerary` directory:
+5. Create a `.env` file in the `travel-itinerary` directory
+
    ```env
    GEMINI_API_KEY=your_gemini_key
    ```
 
-5. **Install Node.js dependencies**
-   ```bash
-   npm install
-   ```
+## Running the App
 
-## 🏃 Running the Application
+Start the frontend:
 
-1. **Start the frontend**
-   ```bash
-   npm run dev
-   ```
-   Click the localhost link that appears in your terminal.
+```bash
+npm run dev
+```
 
-2. **Start the backend server** (in a new terminal)
-   ```bash
-   cd travel-itinerary
-   node server.js
-   ```
+Start the itinerary backend (separate terminal):
 
-3. **Start exploring!** 
-   
-   Visit the localhost URL and search for the best flight deals from your city.
+```bash
+cd travel-itinerary
+node server.js
+```
 
-## 💡 How to Use
+Then visit the localhost URL shown in your terminal.
 
-1. Enter your origin city
-2. Browse through the best flight deals displayed
-3. Select a destination that interests you
-4. Get an AI-generated itinerary for your trip
+## How to Use
 
-## 🏆 Accomplishments
+1. Enter your departure city or airport code in the search bar
+2. Set the number of passengers
+3. Browse the flight results sorted by best deal
+4. Click "Itinerary" on any destination to generate an AI travel plan
+5. Click "Book" to go directly to the airline's site
 
-- Built a functional tool that solves a real travel planning challenge
-- Successfully integrated multiple APIs (Amadeus and Gemini)
-- Learned effective team collaboration and new development tools
+## Roadmap
 
-## 🚧 Challenges We Overcame
+- Public deployment
+- Faster API response times
+- Filtering by budget, airline, and trip length
+- Saved searches and user accounts
+- Hotel and activity recommendations alongside flights
 
-- Optimized flight data requests that initially took too long to load
-- Integrated multiple APIs seamlessly
-- Learned and implemented new technologies on a tight timeline
+## License
 
-## 🔮 What's Next
-
-- Deploy the site for public use
-- Reduce API request load times
-- Add more filtering and customization options
-- Implement user accounts to save favorite destinations
-- Expand to include hotel and activity recommendations
-
-## 👥 Team
-
-Built with ❤️ by the Travelio team
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-**Happy Traveling! 🌍**
+MIT
